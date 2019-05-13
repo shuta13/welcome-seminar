@@ -1,5 +1,6 @@
 <?php
 session_start();
+// ログインチェック
 if (!$_SESSION) {
   $no_login_url = "index.php";
 	header("Location: {$no_login_url}");
@@ -20,5 +21,6 @@ if (!$_SESSION) {
     <?php 
       echo "名前：".$_POST['name'];
     ?>
+    <br><a href="./update.php">次→</a>
   </body>
 </html>
